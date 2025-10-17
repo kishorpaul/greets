@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/search_activity_relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="5dp"
+    tools:context=".SearchActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:paddingLeft="5dp"
+        android:id="@+id/search_activity_linearLayout"
+        android:layout_height="35dp">
+
+        <ImageButton
+            android:layout_width="35dp"
+            android:src="@drawable/ic_back"
+            android:background="@color/white"
+            android:id="@+id/search_back_page"
+            android:layout_height="match_parent"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:background="@drawable/main_search_edit_text"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Looking for someone?"
+                android:padding="5dp"
+                android:textSize="15dp"
+                android:layout_marginLeft="10dp"
+                android:textColorHint="@color/dark_grey"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/main_search_edit_text"
+                android:id="@+id/search_edit_text"
+                />
+
+            <ImageButton
+                android:layout_width="50dp"
+                android:id="@+id/search_send"
+                android:background="@drawable/status_card_item_background"
+                android:layout_margin="5dp"
+                android:layout_height="match_parent"
+                android:layout_alignEnd="@id/search_edit_text"
+                app:flow_horizontalAlign="center"
+                android:src="@drawable/ic_send_blue"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:id="@+id/search_recyclerView"
+        android:layout_below="@+id/search_activity_linearLayout"/>
+
+</RelativeLayout>
+

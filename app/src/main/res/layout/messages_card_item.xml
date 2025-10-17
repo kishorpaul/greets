@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_marginBottom="5dp"
+    android:layout_height="wrap_content">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/ic_launcher_background"
+        android:id="@+id/messages_card_item_image"
+        android:layout_margin="5dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kishor"
+        android:id="@+id/messages_card_item_username"
+        android:layout_toRightOf="@id/messages_card_item_image"
+        android:layout_margin="5dp"
+        android:textSize="15dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:textSize="12dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Yo! This is the new chat application which is Swadeshi. Let's grow it."
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:id="@+id/messages_card_item_message"
+        android:layout_below="@id/messages_card_item_username"
+        android:layout_toRightOf="@id/messages_card_item_image"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="10dp"
+        android:textColor="@color/dark_grey"
+        android:textStyle="bold"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginEnd="10dp"
+        android:background="@color/grey"
+        android:layout_below="@id/messages_card_item_image"/>
+
+</RelativeLayout>

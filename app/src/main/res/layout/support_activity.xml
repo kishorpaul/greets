@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp"
+            android:hint="Find the one!"
+            android:padding="5dp"
+            android:textSize="15dp"
+            android:layout_marginLeft="10dp"
+            android:drawableStart="@drawable/baseline_person_search_24"
+            android:textColorHint="@color/dark_grey"
+            android:layout_marginRight="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:background="@drawable/main_search_edit_text"
+            android:id="@+id/main_search_edit_text"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Status"
+            android:id="@+id/main_status_header"
+            app:layout_constraintTop_toBottomOf="@id/main_search_edit_text"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/main_status_recycler_view"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@id/main_status_header"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:id="@+id/main_status_recycler_view_emptyText"
+            android:layout_height="wrap_content"
+            android:text="No Status to display."
+            android:layout_marginTop="55dp"
+            android:visibility="visible"
+            app:layout_constraintTop_toBottomOf="@id/main_status_header"
+            android:textAlignment="center"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_height="wrap_content"
+            android:text="Messages"
+            android:id="@+id/main_messages_header"
+            app:layout_constraintTop_toBottomOf="@id/main_status_recycler_view"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            tools:ignore="MissingConstraints" />
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginRight="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/main_new_message"
+            android:src="@drawable/ic_new_message_icon"
+            app:layout_constraintTop_toBottomOf="@id/main_status_recycler_view"
+            android:layout_marginTop="10dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/main_messages_recycler_view"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintTop_toBottomOf="@id/main_messages_header"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:text="No messages to display."
+            android:layout_height="match_parent"
+            android:id="@+id/main_messages_recycler_view_emptyText"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="100dp"
+            android:textAlignment="center"
+            android:visibility="gone"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintTop_toBottomOf="@id/main_messages_header"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
