@@ -115,5 +115,5 @@
     android:layout_below="@id/mob_sms_desc_text"
     android:layout_margin="25dp"
     android:background="@drawable/t_c_bg"
-    app:backgroundTint="@drawable/t_c_bg"/>
+    app:backgroundTint="@color/green"/>
 </RelativeLayout>
