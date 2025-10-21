@@ -1,4 +1,4 @@
-package com.example.nestedscrollview;
+package com.example.nestedscrollview.activities;
 
 import static android.view.View.GONE;
 import static android.view.View.VISIBLE;
@@ -14,6 +14,12 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.nestedscrollview.adapters.MessageAdapter;
+import com.example.nestedscrollview.dataitems.MessagesDataItem;
+import com.example.nestedscrollview.R;
+import com.example.nestedscrollview.adapters.StatusAdapter;
+import com.example.nestedscrollview.dataitems.StatusDataItem;
 
 import java.util.ArrayList;
 

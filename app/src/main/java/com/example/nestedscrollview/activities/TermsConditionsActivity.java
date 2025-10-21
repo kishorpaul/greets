@@ -1,4 +1,4 @@
-package com.example.nestedscrollview;
+package com.example.nestedscrollview.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,7 +8,9 @@ import android.widget.Button;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class TermsConditions extends AppCompatActivity {
+import com.example.nestedscrollview.R;
+
+public class TermsConditionsActivity extends AppCompatActivity {
 
     Button continueBtn;
 
@@ -21,8 +23,9 @@ public class TermsConditions extends AppCompatActivity {
         continueBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(TermsConditions.this, SignInActivity.class);
+                Intent intent = new Intent(TermsConditionsActivity.this, SignInActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
     }

@@ -20,7 +20,7 @@
         android:id="@+id/messages_card_item_username"
         android:layout_toRightOf="@id/messages_card_item_image"
         android:layout_margin="5dp"
-        android:textSize="15dp"
+        android:textSize="18dp"
         android:textColor="@color/black"
         android:textStyle="bold"/>
 

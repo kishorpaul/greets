@@ -1,12 +1,15 @@
-package com.example.nestedscrollview;
+package com.example.nestedscrollview.adapters;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.nestedscrollview.R;
+import com.example.nestedscrollview.dataitems.StatusDataItem;
+import com.example.nestedscrollview.viewholders.StatusViewHolder;
 
 import java.util.ArrayList;
 

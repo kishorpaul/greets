@@ -1,4 +1,4 @@
-package com.example.nestedscrollview;
+package com.example.nestedscrollview.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,6 +8,8 @@ import android.widget.ImageButton;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.nestedscrollview.R;
 
 public class VerifyActivity  extends AppCompatActivity {
     Button verifyOtpButton;

@@ -1,4 +1,4 @@
-package com.example.nestedscrollview;
+package com.example.nestedscrollview.viewholders;
 
 import android.view.View;
 import android.widget.ImageView;
@@ -7,11 +7,11 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import java.util.ArrayList;
+import com.example.nestedscrollview.R;
 
 public class MessageViewHolder extends RecyclerView.ViewHolder {
-    TextView userName, message;
-    ImageView image;
+    public TextView userName, message;
+    public ImageView image;
 
     public MessageViewHolder(@NonNull View itemView) {
         super(itemView);

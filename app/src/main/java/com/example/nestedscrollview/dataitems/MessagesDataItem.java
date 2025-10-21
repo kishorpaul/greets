@@ -1,4 +1,4 @@
-package com.example.nestedscrollview;
+package com.example.nestedscrollview.dataitems;
 
 public class MessagesDataItem {
     private String mUsername, mMessage;

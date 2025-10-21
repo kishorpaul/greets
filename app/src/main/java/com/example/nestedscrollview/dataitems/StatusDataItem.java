@@ -1,4 +1,4 @@
-package com.example.nestedscrollview;
+package com.example.nestedscrollview.dataitems;
 
 public class StatusDataItem {
     private int mImage;
