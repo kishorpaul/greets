@@ -6,21 +6,27 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatButton;
 
 import com.example.nestedscrollview.R;
 import com.example.nestedscrollview.utility.CustomProgress;
+import com.google.android.material.button.MaterialButton;
+import com.hbb20.CountryCodePicker;
 import com.razzaghimahdi78.dotsloading.linear.LoadingScaly;
 
 public class SignInActivity extends AppCompatActivity {
 
-    Button getOtpButton;
+    AppCompatButton getOtpButton;
     ImageButton closeButton;
     LoadingScaly loadingScaly;
     CustomProgress customProgress;
+    CountryCodePicker countryCodePicker;
+    EditText phoneNum;
 
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,6 +35,10 @@ public class SignInActivity extends AppCompatActivity {
         getOtpButton = findViewById(R.id.mob_sendOTP_button);
         closeButton = findViewById(R.id.signIn_close_button);
         loadingScaly = findViewById(R.id.signIn_dots_loading);
+        countryCodePicker = findViewById(R.id.mob_country_picker);
+        phoneNum = findViewById(R.id.mob_edit_text);
+
+        countryCodePicker.registerCarrierNumberEditText(phoneNum);
 
         customProgress = new CustomProgress(this);
 
@@ -36,10 +46,16 @@ public class SignInActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 customProgress.show();
-//                Intent intent = new Intent(SignInActivity.this, VerifyActivity.class);
-//                startActivity(intent);
-//                finish();
-//                customProgress.dismiss();
+                try {
+                    Thread.sleep(0);
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
+                }
+                Intent intent = new Intent(SignInActivity.this, VerifyActivity.class);
+                intent.putExtra("phoneNum", countryCodePicker.getFullNumberWithPlus());
+                startActivity(intent);
+                finish();
+                customProgress.dismiss();
             }
         });
 

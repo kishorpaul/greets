@@ -1,32 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="180dp"
-    android:id="@+id/status_card_item"
-    android:layout_margin="3dp"
-    android:padding="5dp"
-    android:layout_height="85dp">
+    android:layout_height="85dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/status_card_item_background"
+    android:layout_width="160dp"
+    android:layout_margin="3dp">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:id="@+id/status_card_item_image_bg1"
+        android:src="@drawable/ic_launcher_background"/>
 
     <de.hdodenhof.circleimageview.CircleImageView
-        android:layout_width="match_parent"
-        android:textAlignment="center"
-        android:layout_height="70dp"
-        android:id="@+id/status_card_item_image"
-        android:src="@drawable/ic_launcher_background"
-        />
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:id="@+id/status_card_item_image1"
+        android:layout_margin="3dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@mipmap/ic_launcher"/>
 
     <TextView
-        android:textAlignment="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="This is the status gor the new application."
         android:maxLines="1"
         android:ellipsize="end"
-        android:layout_width="match_parent"
-        android:layout_marginTop="5dp"
-        android:textSize="10dp"
-        android:id="@+id/status_card_item_username"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/status_card_item_image"
-        android:text="Kishor_rajappa"
-        android:textStyle="normal"
-        android:textColor="@color/black"/>
+        android:textSize="12dp"
+        android:id="@+id/status_card_item_username1"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="3dp"
+        android:layout_marginStart="3dp"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

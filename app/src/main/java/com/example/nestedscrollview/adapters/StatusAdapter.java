@@ -23,7 +23,7 @@ public class StatusAdapter extends RecyclerView.Adapter<StatusViewHolder> {
     @NonNull
     @Override
     public StatusViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.status_card_item, parent,false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.card_view_status, parent,false);
 
         return new StatusViewHolder(view);
     }
@@ -33,7 +33,8 @@ public class StatusAdapter extends RecyclerView.Adapter<StatusViewHolder> {
         StatusDataItem statusDataItem = statusDataItems.get(position);
 
         holder.username.setText(statusDataItem.getmUsername());
-        holder.image.setImageResource(statusDataItem.getmImage());
+        holder.image1.setImageResource(statusDataItem.getmUserImage());
+        holder.image2.setImageResource(statusDataItem.getmStatusImage());
     }
 
     @Override

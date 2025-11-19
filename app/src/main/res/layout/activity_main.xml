@@ -19,14 +19,14 @@
             android:layout_width="match_parent"
             android:layout_height="35dp"
             android:layout_marginTop="8dp"
-            android:hint="Find the one!"
+            android:hint="Looking for someone?"
             android:padding="5dp"
             android:textSize="15dp"
             android:layout_marginLeft="10dp"
             android:drawableStart="@drawable/baseline_person_search_24"
             android:textColorHint="@color/dark_grey"
             android:layout_marginRight="10dp"
-            android:background="@drawable/main_search_edit_text"
+            android:background="@drawable/t_c_bg"
             android:id="@+id/main_search_edit_text"
             />
 

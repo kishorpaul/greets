@@ -7,12 +7,14 @@ import android.widget.Button;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatButton;
 
 import com.example.nestedscrollview.R;
+import com.google.android.material.button.MaterialButton;
 
 public class TermsConditionsActivity extends AppCompatActivity {
 
-    Button continueBtn;
+    AppCompatButton continueBtn;
 
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

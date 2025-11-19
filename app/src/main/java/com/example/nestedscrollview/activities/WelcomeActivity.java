@@ -1,4 +1,4 @@
-package com.example.nestedscrollview.activities;
+ package com.example.nestedscrollview.activities;
 
 import android.content.Intent;
 import android.os.Bundle;

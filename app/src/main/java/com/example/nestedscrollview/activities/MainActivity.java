@@ -29,8 +29,9 @@ public class MainActivity extends AppCompatActivity{
     ArrayList<MessagesDataItem> messagesDataItemArrayList;
     ArrayList<StatusDataItem> statusDataItemsArrayList;
     LinearLayout emptyStatusLayout;
-    TextView emptyMessageText, emptyStatusText;
+    TextView emptyMessageText, emptyStatusText, username;
     EditText searchInput;
+    String intentUserName;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -42,6 +43,11 @@ public class MainActivity extends AppCompatActivity{
         emptyStatusText = findViewById(R.id.main_status_recycler_view_emptyText);
         emptyMessageText = findViewById(R.id.main_messages_recycler_view_emptyText);
         searchInput = findViewById(R.id.main_search_edit_text);
+        username = findViewById(R.id.main_username);
+
+        intentUserName = getIntent().getExtras().getString("username");
+        username.setText(intentUserName);
+
 
         searchInput.setFocusable(false);
         searchInput.setFocusableInTouchMode(false);
@@ -57,12 +63,12 @@ public class MainActivity extends AppCompatActivity{
 
         statusDataItemsArrayList = new ArrayList<>();
         for (int i=0; i<20; i++){
-            statusDataItemsArrayList.add(new StatusDataItem(R.drawable.ic_launcher_background, "Kishor"));
+            statusDataItemsArrayList.add(new StatusDataItem(R.drawable.welcome, R.drawable.f2, "Kishor"));
         }
 
         messagesDataItemArrayList = new ArrayList<>();
         for(int i=0; i<20; i++){
-            messagesDataItemArrayList.add(new MessagesDataItem("Kishor","Yo! This is the new chat application which is Swadeshi. Let's grow it.", R.drawable.ic_launcher_background));
+            messagesDataItemArrayList.add(new MessagesDataItem("Kishor","Yo! This is the new chat application which is Swadeshi. Let's grow it.", R.drawable.welcome ));
         }
 
         LinearLayoutManager messagesLayout = new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.VERTICAL,false);

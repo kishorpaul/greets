@@ -10,7 +10,7 @@
     <com.razzaghimahdi78.dotsloading.linear.LoadingScaly
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:dots_color="@color/green"
+        app:dots_color="@color/black"
         app:dots_duration="800"
         app:dots_count="6"
         app:dots_size="5dp"

@@ -12,9 +12,9 @@
 
         <ImageButton
             android:layout_width="30dp"
-            android:id="@+id/verify_back_button"
+            android:id="@+id/sign_in_profile_close_button"
             android:background="@color/white"
-            android:src="@drawable/ic_back"
+            android:src="@drawable/baseline_close_24"
             android:layout_height="30dp"/>
 
         <LinearLayout
@@ -25,7 +25,13 @@
 
             <View
                 android:layout_width="15dp"
-                android:layout_height="2dp"
+                android:layout_height="3dp"
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/grey_circle"/>
+
+            <View
+                android:layout_width="15dp"
+                android:layout_height="3dp"
                 android:layout_marginEnd="5dp"
                 android:background="@drawable/grey_circle"/>
 
@@ -34,12 +40,6 @@
                 android:layout_height="5dp"
                 android:layout_marginEnd="5dp"
                 android:background="@drawable/black_circle"/>
-
-            <View
-                android:layout_width="15dp"
-                android:layout_height="2dp"
-                android:layout_marginEnd="5dp"
-                android:background="@drawable/grey_circle"/>
 
         </LinearLayout>
 
@@ -58,7 +58,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Verify your mobile number"
+            android:text="Select profile Image and username"
             android:textAlignment="center"
             android:textStyle="bold"
             android:id="@+id/signIn_verify_desc"
@@ -69,23 +69,13 @@
             android:layout_margin="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Enter the verification code sent to the mobile number"
+            android:text="The selected profile image and the username will be used as display image and username."
             android:textAlignment="center"
             android:textStyle="bold"
             android:id="@+id/signIn_verify_desc_sub"
             android:textSize="15dp"
             android:textColor="@color/dark_grey"/>
 
-        <TextView
-            android:layout_margin="5dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="+91 8296687710"
-            android:textAlignment="center"
-            android:textStyle="bold"
-            android:id="@+id/signIn_verify_desc_mobNum"
-            android:textSize="15dp"
-            android:textColor="@color/black"/>
     </LinearLayout>
 
     <LinearLayout
@@ -95,8 +85,16 @@
         android:layout_below="@id/desc_ll"
         android:layout_marginTop="50dp"
         android:layout_marginLeft="10dp"
+        android:orientation="vertical"
         android:layout_marginRight="10dp"
         android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="100dp"
+            android:src="@drawable/welcome"
+            android:layout_margin="20dp"
+            android:id="@+id/sign_in_profile_select_image"
+            android:layout_height="100dp"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -107,53 +105,40 @@
             android:layout_height="wrap_content">
 
             <EditText
-                android:id="@+id/verify_edit_text"
+                android:id="@+id/sign_in_profile_select_username"
                 android:textColor="@color/black"
                 android:textAlignment="center"
-                android:inputType="number"
-                android:maxLength="6"
+                android:inputType="text"
+                android:maxLines="1"
+                android:ellipsize="start"
                 android:background="@null"
                 android:padding="5dp"
                 android:textStyle="bold"
-                android:hint="Enter Verification Code"
+                android:hint="Enter Username"
                 android:textSize="18dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
 
             <View
-                android:layout_width="190dp"
+                android:layout_width="match_parent"
                 android:layout_height="1.5dp"
                 android:background="@color/dark_grey"/>
 
         </LinearLayout>
-
     </LinearLayout>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/mob_sms_desc_text"
-        android:layout_below="@id/mob_ll"
-        android:textAlignment="center"
-        android:textStyle="bold"
-        android:textSize="15dp"
-        android:textColor="@color/dark_grey"
-        android:layout_marginRight="15dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="100dp"
-        android:text="By clicking on VERIFY, we will verify the code and take you to main page."/>
 
     <androidx.appcompat.widget.AppCompatButton
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:cornerRadius="15dp"
         android:textStyle="bold"
-        android:text="Verify"
+        android:text="Save &amp; Continue"
         android:textColor="@color/black"
         app:strokeColor="@color/dark_grey"
-        app:strokeWidth="1dp"
         android:background="@drawable/layered_button"
-        android:layout_below="@id/mob_sms_desc_text"
-        android:id="@+id/signIn_verify_button"
+        android:layout_below="@id/mob_ll"
+        android:id="@+id/sign_in_profile_update"
         android:padding="10dp"
-        android:layout_margin="25dp"/>
+        android:layout_marginRight="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="40dp"/>
 </RelativeLayout>

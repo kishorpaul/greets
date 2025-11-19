@@ -4,11 +4,11 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:id="@+id/close_ll"
         android:layout_margin="5dp"
-        android:layout_height="wrap_content">
+        android:layout_height="30dp">
 
         <ImageButton
             android:layout_width="30dp"
@@ -17,7 +17,33 @@
             android:src="@drawable/baseline_close_24"
             android:layout_height="30dp"/>
 
-    </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:gravity="center_vertical"
+            android:layout_height="match_parent">
+
+            <View
+                android:layout_width="15dp"
+                android:layout_height="5dp"
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/black_circle"/>
+
+            <View
+                android:layout_width="15dp"
+                android:layout_height="2dp"
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/grey_circle"/>
+
+            <View
+                android:layout_width="15dp"
+                android:layout_height="2dp"
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/grey_circle"/>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -81,7 +107,6 @@
                 android:hint="Enter mobile number"
                 android:inputType="number"
                 android:background="@null"
-                android:maxLength="10"
                 android:padding="5dp"
                 android:textSize="18dp"
                 android:layout_width="match_parent"
@@ -108,28 +133,31 @@
         android:layout_marginTop="100dp"
         android:text="By clicking on GET OTP, you will receive a SMS to the entered monbile number."/>
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="GET OTP"
+        app:cornerRadius="15dp"
         android:textStyle="bold"
-        android:textSize="18dp"
+        android:text="GET OTP"
+        android:textColor="@color/black"
+        app:strokeColor="@color/dark_grey"
+        app:strokeWidth="1dp"
         android:id="@+id/mob_sendOTP_button"
+        android:background="@drawable/layered_button"
         android:layout_below="@id/mob_sms_desc_text"
-        android:layout_margin="25dp"
-        android:background="@drawable/t_c_bg"
-        app:backgroundTint="@color/green"/>
+        android:padding="10dp"
+        android:layout_margin="25dp"/>
 
-    <com.razzaghimahdi78.dotsloading.linear.LoadingScaly
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:dots_color="@color/green"
-        app:dots_duration="800"
-        app:dots_count="6"
-        app:dots_size="5dp"
-        android:background="@drawable/flag_transparent"
-        android:visibility="gone"
-        android:id="@+id/signIn_dots_loading"
-    />
 
-</RelativeLayout>
+        <com.razzaghimahdi78.dotsloading.linear.LoadingScaly
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:dots_color="@color/green"
+            app:dots_duration="800"
+            app:dots_count="6"
+            app:dots_size="5dp"
+            android:background="@drawable/flag_transparent"
+            android:visibility="gone"
+            android:id="@+id/signIn_dots_loading"/>
+
+    </RelativeLayout>

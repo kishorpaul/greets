@@ -11,9 +11,11 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:paddingLeft="5dp"
+        android:padding="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
         android:id="@+id/search_activity_linearLayout"
-        android:layout_height="35dp">
+        android:layout_height="45dp">
 
         <ImageButton
             android:layout_width="35dp"
@@ -24,7 +26,7 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:background="@drawable/main_search_edit_text"
+            android:background="@drawable/t_c_bg"
             android:layout_height="match_parent">
 
             <EditText
@@ -33,10 +35,8 @@
                 android:hint="Looking for someone?"
                 android:padding="5dp"
                 android:textSize="15dp"
-                android:layout_marginLeft="10dp"
-                android:textColorHint="@color/dark_grey"
-                android:layout_marginRight="10dp"
                 android:background="@drawable/main_search_edit_text"
+                android:layout_margin="3dp"
                 android:id="@+id/search_edit_text"
                 />
 
@@ -44,7 +44,7 @@
                 android:layout_width="50dp"
                 android:id="@+id/search_send"
                 android:background="@drawable/status_card_item_background"
-                android:layout_margin="5dp"
+                android:layout_margin="3dp"
                 android:layout_height="match_parent"
                 android:layout_alignEnd="@id/search_edit_text"
                 app:flow_horizontalAlign="center"
